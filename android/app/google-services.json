@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1081926756389",
+    "project_id": "ecommerce-abe3b",
+    "storage_bucket": "ecommerce-abe3b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1081926756389:android:71a9234a24587ce0d7b7cc",
+        "android_client_info": {
+          "package_name": "com.example.signeup"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4J90vzySAHeN5-W3NqTJ1VHDRUzwbuEw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
