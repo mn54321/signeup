@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 
 class gridcard extends StatelessWidget {
-  const gridcard({
-    super.key,
-  });
+  final String imagepath;
+  gridcard({Key? key, required this.imagepath}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -25,12 +24,10 @@ class gridcard extends StatelessWidget {
                 children: [
                   Center(
                     child: Image(
-                      height: 130,
-                      width: 160,
-                      image: AssetImage(
-                        'images/redpair.png',
-                      ),
-                      fit: BoxFit.cover,
+                      height: 120,
+                      width: 130,
+                      image: AssetImage(imagepath),
+                      fit: BoxFit.contain,
                     ),
                   ),
                   Positioned(
@@ -108,36 +105,37 @@ class gridcard extends StatelessWidget {
                     )
                   ],
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 5),
-                      child: Text(
-                        "\$35.5",
-                        style: TextStyle(fontWeight: FontWeight.w900),
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                      ),
-                    ),
-                    Container(
-                      height: 30,
-                      width: 30,
-                      decoration: BoxDecoration(
-                          color: Colors.black,
-                          borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(13),
-                              bottomRight: Radius.circular(21))),
-                      child: Icon(
-                        Icons.add,
-                        color: Colors.white,
-                        size: 20,
-                      ),
-                    )
-                  ],
-                )
               ],
             ),
+            Spacer(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 5),
+                  child: Text(
+                    "\$35.5",
+                    style: TextStyle(fontWeight: FontWeight.w900),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ),
+                Container(
+                  height: 30,
+                  width: 30,
+                  decoration: BoxDecoration(
+                      color: Colors.black,
+                      borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(13),
+                          bottomRight: Radius.circular(21))),
+                  child: Icon(
+                    Icons.add,
+                    color: Colors.white,
+                    size: 20,
+                  ),
+                )
+              ],
+            )
           ],
         ),
       ),

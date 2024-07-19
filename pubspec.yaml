@@ -63,6 +63,7 @@ dev_dependencies:
   get: ^4.6.5
   carousel_slider: ^4.2.1
   dots_indicator: ^3.0.0
+  switcher_button: ^0.0.4
 flutter_native_splash:
   color: "#FFFFFF"
   
@@ -97,16 +98,60 @@ flutter:
   assets:
     - images/animation.json
     - images/light.png
+    - images/mann.jpeg
     - images/dark.png
     - images/first.gif
     - images/second.gif
     - images/third.gif
-    - images/shoe.png
+    - images/papularcategories/sneakers.png
+    - images/papularcategories/wristwatch.png
+    - images/papularcategories/high.png
+    - images/papularcategories/shirtlist.png
+    - images/papularcategories/kitchenware.png
+    - images/papularcategories/handbag.png
     - images/banner1.png
     - images/banner2.png
     - images/banner3.png
     - images/banner4.png
-    - images/redpair.png
+    - images/papular/redpair.png
+    - images/papular/wredpair.png
+    - images/papular/blue.png
+    - images/papular/colorful.png
+    - images/papular/yellow.png
+    - images/papular/whiteair.png
+    - images/brands/ikea.png
+    - images/brands/nike.png
+    - images/brands/puma.png
+    - images/brands/adidas.png
+    - images/brands/jacket.png
+    - images/furniture/chair.png
+    - images/furniture/chairgrey.png
+    - images/furniture/lamp.png
+    - images/furniture/table.png
+    - images/furniture/ychair.png
+    - images/furniture/dum.png
+    - images/furniture/sofa.png
+    - images/electronics/iphone.png
+    - images/electronics/head.png
+    - images/electronics/ac.png
+    - images/electronics/reffi.png
+    - images/electronics/vr.png
+    - images/electronics/wash.png
+    - images/electronics/flash.png
+    - images/clothes/levi.png
+    - images/clothes/hoodie.png
+    - images/clothes/tshirt.png
+    - images/clothes/shirt.png
+    - images/clothes/denim.png
+    - images/clothes/leather.png
+    - images/clothes/short.png
+    - images/cosmetic/dior.png
+    - images/cosmetic/gcream.png
+    - images/cosmetic/gold.png
+    - images/cosmetic/nevia.png
+    - images/cosmetic/primar.png
+    - images/cosmetic/rocher.png
+    - images/cosmetic/sun.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

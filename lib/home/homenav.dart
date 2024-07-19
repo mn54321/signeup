@@ -22,6 +22,23 @@ int _currentIndex = 0;
 class _HomenavState extends State<Homenav> {
   @override
   Widget build(BuildContext context) {
+    List listview = [
+      'images/papularcategories/sneakers.png',
+      'images/papularcategories/wristwatch.png',
+      'images/papularcategories/high.png',
+      'images/papularcategories/shirtlist.png',
+      'images/papularcategories/kitchenware.png',
+      'images/papularcategories/handbag.png',
+    ];
+    List papular = [
+      'images/papular/redpair.png',
+      'images/papular/wredpair.png',
+      'images/papular/blue.png',
+      'images/papular/colorful.png',
+      'images/papular/yellow.png',
+      'images/papular/whiteair.png'
+    ];
+    List text = ['Shoes', 'Watches', 'Girls', 'Clothes', 'Kitchenware', 'Bags'];
     return Scaffold(
         backgroundColor: Color.fromARGB(255, 253, 249, 249),
         body: SingleChildScrollView(
@@ -79,7 +96,7 @@ class _HomenavState extends State<Homenav> {
                               Stack(
                                 children: [
                                   IconButton(
-                                      onPressed: null,
+                                      onPressed: () {},
                                       icon: Icon(
                                         Icons.shopping_bag_outlined,
                                         color: HexColor("#dbe9f6")
@@ -108,7 +125,7 @@ class _HomenavState extends State<Homenav> {
                                 ],
                               ),
                               const SizedBox(
-                                width: 40,
+                                width: 20,
                               )
                             ],
                           ),
@@ -145,7 +162,7 @@ class _HomenavState extends State<Homenav> {
                               child: ListView.builder(
                                 shrinkWrap: true,
                                 scrollDirection: Axis.horizontal,
-                                itemCount: 6,
+                                itemCount: listview.length,
                                 itemBuilder: (context, index) {
                                   return Padding(
                                     padding: const EdgeInsets.symmetric(
@@ -160,17 +177,19 @@ class _HomenavState extends State<Homenav> {
                                               borderRadius:
                                                   BorderRadius.circular(56)),
                                           child: Center(
-                                            child: Image(
-                                                height: 50,
-                                                width: 50,
-                                                fit: BoxFit.cover,
-                                                image: AssetImage(
-                                                  'images/shoe.png',
-                                                )),
+                                            child: Image.asset(
+                                              listview[index],
+                                              height: 30,
+                                              width: 30,
+                                              fit: BoxFit.cover,
+                                            ),
                                           ),
                                         ),
+                                        SizedBox(
+                                          height: 10,
+                                        ),
                                         Text(
-                                          "Shoes",
+                                          text[index],
                                           style: TextStyle(color: Colors.white),
                                         )
                                       ],
@@ -227,17 +246,20 @@ class _HomenavState extends State<Homenav> {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 20),
                     child: SizedBox(
-                      height: 600,
                       child: GridView.builder(
                         itemCount: 6,
                         shrinkWrap: true,
+                        physics: const NeverScrollableScrollPhysics(),
                         gridDelegate:
                             const SliverGridDelegateWithFixedCrossAxisCount(
                                 crossAxisCount: 2,
                                 mainAxisSpacing: 20,
                                 crossAxisSpacing: 20,
                                 mainAxisExtent: 225),
-                        itemBuilder: (context, index) => gridcard(),
+                        itemBuilder: (context, index) => gridcard(
+                          key: UniqueKey(),
+                          imagepath: papular[index],
+                        ),
                       ),
                     ),
                   )
