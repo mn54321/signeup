@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:signeup/shop/detailscreen.dart';
 
 class gridcard extends StatelessWidget {
   final String imagepath;
-  gridcard({Key? key, required this.imagepath}) : super(key: key);
+  final VoidCallback ontap;
+  gridcard({Key? key, required this.imagepath, required this.ontap})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: ontap,
       child: Container(
         padding: EdgeInsets.all(1),
         decoration: BoxDecoration(

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:signeup/home/containers/containers.dart';
 import 'package:signeup/home/containers/curvededges.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:signeup/profileedit/Addresses.dart';
 import 'package:signeup/profileedit/profileedit.dart';
 import 'package:switcher_button/switcher_button.dart';
 
@@ -172,6 +173,13 @@ class _ProfileState extends State<Profile> {
                     "set shopping delivery address",
                     style: TextStyle(fontSize: 13, color: Colors.grey),
                   ),
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Addresses(),
+                        ));
+                  },
                 ),
               ),
               Padding(

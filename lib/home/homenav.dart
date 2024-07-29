@@ -9,6 +9,8 @@ import 'package:signeup/home/containers/curvededges.dart';
 import 'package:signeup/home/containers/searchbar.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:dots_indicator/dots_indicator.dart';
+import 'package:signeup/shop/detail2.dart';
+import 'package:signeup/shop/detailscreen.dart';
 
 class Homenav extends StatefulWidget {
   Homenav({super.key});
@@ -17,9 +19,11 @@ class Homenav extends StatefulWidget {
   State<Homenav> createState() => _HomenavState();
 }
 
-int _currentIndex = 0;
-
 class _HomenavState extends State<Homenav> {
+  int _currentIndex = 0;
+
+  List ontap = [Detailscreen(), Detail2()];
+
   @override
   Widget build(BuildContext context) {
     List listview = [
@@ -257,6 +261,13 @@ class _HomenavState extends State<Homenav> {
                                 crossAxisSpacing: 20,
                                 mainAxisExtent: 225),
                         itemBuilder: (context, index) => gridcard(
+                          ontap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => ontap[index],
+                                ));
+                          },
                           key: UniqueKey(),
                           imagepath: papular[index],
                         ),
